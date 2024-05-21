@@ -40,12 +40,12 @@ Certifique-se de ter a versão mais recente do Python instalada. Baixe-o no [sit
 
 Certifique-se de ter a versão mais recente do GIT instalada. Baixe-o no [site oficial do GIT](https://git-scm.com/).
 
-### 2. Clonar o Repositório
+### 2. Clonar o Repositório (você pode fazer isso manualmente sem o git clicando no botão `<> Code` e `Download ZIP` (no topo desta página), e extraindo o conteudo para algum lugar)
 
 Clone este repositório usando o comando:
 
 ```sh
-git clone https://github.com/seu_usuario/gramma.git
+git clone https://github.com/lkotlarenko/gramma.git
 cd gramma
 ```
 
@@ -74,7 +74,7 @@ Renomeie `.env.example` para `.env`:
 mv .env.example .env
 ```
 
-Edite o arquivo `.env` com sua API_KEY da Groq, substituindo `YOUR_GROQ_API_KEY` pela sua chave real do [console da GROQ](https://console.groq.com/keys):
+Edite o arquivo `.env` com sua API_KEY da Groq, substituindo `YOUR_GROQ_API_KEY` pela sua chave real obtida em [console da GROQ](https://console.groq.com/keys) (você pode usar o notepad para editar o arquivo):
 
 ### Deve ficar assim após a edição:
 
