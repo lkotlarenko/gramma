@@ -151,17 +151,22 @@ GROQ_API_KEY=gsk_y**********************************************
 
 ## Usage
 
-### Start the Clipboard Listener
+### Start Gramma
 
-You can create a shortcut for the file `gramma_starter.bat` and move it to any place to run Gramma.
+On Windows you can create a shortcut for the file `gramma_starter.bat` and move it to any place to run Gramma.
+And on Linux and Mac you can run it either in a terminal using the direct `gramma.py`, or using the `gramma_starter_linux.sh`.
 
 ### Tray Icon
 
-The script will minimize to the system tray. Right-click the tray icon for exiting.
+The app will minimize to the system tray. Right-click the tray icon for exiting.
 
 ### Using Commands
 
 Copy text to your clipboard with one of the command prefixes (e.g., `!gf Your text here` for grammar correction).
+
+#### How to change the Groq model used in Gramma:
+
+By default, Gramma uses llama3-70b-8192 model, you edit this in the `.env` file by replacing llama inside `GROQ_MODEL` with any other model available in [GROQ console](https://console.groq.com/docs/models).
 
 ## Project Structure
 
@@ -169,14 +174,17 @@ Copy text to your clipboard with one of the command prefixes (e.g., `!gf Your te
 gramma/
 │
 ├── src/
-│   ├── images/        # Folder to store app images (only the icon at the moment)
-│   └── config.py      # Variables like app_name and more
-├── .env               # Environment variables (where you put your API key)
-├── requirements.txt   # Project dependencies
-├── gramma.py          # Main script
-├── gramma_starter.bat # Bat file to start Gramma in the system tray (create a shortcut to it to launch it faster)
-├── README.md          # Project documentation (what you are reading right now)
-└── README_PT-BR.md    # Project documentation in Brazilian Portuguese
+│    ├── images/            # Folder to store app images (only the icon at the moment)
+│    └── config.py          # Variables like app_name and more
+├── .env                    # Environment variables (where you put your API key)
+├── commands.py             # Where you edit or add commands
+├── gramma.py               # Main script
+├── gramma_starter.bat      # Bat file to start Gramma in the system tray (create a shortcut to it to launch it faster)
+├── gramma_starter_linux.sh # Shell script to run Gramma on Linux or Mac 
+├── LICENSE                 # Project MIT License file
+├── README.md               # Project documentation (what you are reading right now)
+├── README_PT-BR.md         # Project documentation in Brazilian Portuguese
+└── requirements.txt        # Project dependencies
 ```
 
 ## Contributing
@@ -186,6 +194,12 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 ## Author
 
 Created by [lkotlarenko](https://github.com/lkotlarenko).
+
+### Support me
+
+If you liked my work and want to support me, you can sponsor me here on GitHub. Your support will enable me to focus more on open-source projects. Those contributions will help me continue to learn, grow, and contribute to the open-source ecosystem 💚.
+
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/lkotlarenko?style=social)](https://github.com/sponsors/lkotlarenko)
 
 ## License
 

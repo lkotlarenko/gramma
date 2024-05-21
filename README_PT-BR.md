@@ -12,23 +12,23 @@ Gramma vem com um conjunto de comandos padrão para aprimorar sua experiência d
 
 - `!gf` - **Correção Gramatical**: Melhora a gramática do seu texto.
   ```
-  !gf Eu não posso acreditar que estou vendo isso!
+  !gf Eu não possu acredita que etou vendo isso!
   ```
   Resultado:
   ```
-  Eu mal posso acreditar que estou vendo isso!
+  Eu não posso acreditar que estou vendo isso!
   ```
 
 - `!sm` - **Resumir**: Gera um resumo conciso do texto.
   ```
-  !sm A rápida raposa marrom pula sobre o cão preguiçoso...
+  !sm A degradação do meio ambiente...
   ```
   Resultado:
   ```
   Texto resumido.
   ```
 
-- `!tl` - **Traduzir**: Traduza o texto fornecido.
+- `!tl` - **Traduzir**: Traduza o texto fornecido. (Por padrão o comando traduz de qualquer lingua para Inglês, voce pode editar isso em `commands.py`)
   ```
   !tl Oi, como vai o seu dia?
   ```
@@ -150,17 +150,22 @@ GROQ_API_KEY=gsk_y**********************************************
 
 ## Uso
 
-### Inicie o Listener da Área de Transferência
+### Inicie o Gramma
 
-Você pode criar um atalho para o arquivo `gramma_starter.bat` e movê-lo para qualquer lugar para executar o Gramma.
+No Windows você pode criar um atalho para o arquivo `gramma_starter.bat` e movê-lo para qualquer lugar para executar o Gramma.
+E no Linux e Mac você pode rodar ou diretamente pelo script `gramma.py` em um terminal, ou usar o shell script `gramma_starter_linux.sh`.
 
 ### Ícone da Bandeja
 
-O script será minimizado para a bandeja do sistema. Clique com o botão direito do mouse no ícone da bandeja para sair.
+O app será minimizado para a bandeja do sistema. Clique com o botão direito do mouse no ícone da bandeja para sair.
 
 ### Usando Comandos
 
 Copie o texto para sua área de transferência com um dos prefixos de comando (por exemplo, `!gf Seu texto aqui` para correção gramatical).
+
+#### Como alterar o modelo Groq usado no Gramma:
+
+Por padrão, o Gramma usa o modelo llama3-70b-8192, você pode editar isso no arquivo `.env` substituindo o modelo dentro de `GROQ_MODEL` por qualquer outro modelo disponível no [console GROQ](https://console.groq.com/docs/models).
 
 ## Estrutura do Projeto
 
@@ -168,14 +173,16 @@ Copie o texto para sua área de transferência com um dos prefixos de comando (p
 gramma/
 │
 ├── src/
-│   ├── images/        # Pasta para armazenar imagens do aplicativo (apenas o ícone no momento)
-│   └── config.py      # Variáveis como nome do aplicativo e mais
-├── .env               # Variáveis de ambiente (onde você coloca sua chave API)
-├── requirements.txt   # Dependências do projeto
-├── gramma.py          # Script principal
-├── gramma_starter.bat # Arquivo bat para iniciar o Gramma na bandeja do sistema (crie um atalho para ele para iniciar mais rápido)
-├── README.md          # Documentação do projeto em inglês
-└── README_PT-BR.md    # Documentação do projeto em Português Brasileiro (o que você está lendo agora)
+│    ├── images/            # Pasta para armazenar imagens do aplicativo (apenas o ícone no momento)
+│    └── config.py          # Variáveis como nome do aplicativo e mais
+├── .env                    # Variáveis de ambiente (onde você coloca sua chave API)
+├── commands.py             # Onde você edita ou adiciona comandos
+├── gramma.py               # Script principal
+├── gramma_starter.bat      # Arquivo bat para iniciar o Gramma na bandeja do sistema (crie um atalho para ele para iniciar mais rápido)
+├── gramma_starter_linux.sh # Shell script pra rodar Gramma no Linux or Mac 
+├── README.md               # Documentação do projeto em inglês
+├── README_PT-BR.md         # Documentação do projeto em Português Brasileiro (o que você está lendo agora)
+└── requirements.txt        # Dependências do projeto
 ```
 
 ## Contribuindo
@@ -185,6 +192,12 @@ Contribuições são bem-vindas! Por favor, faça um fork do repositório e envi
 ## Autor
 
 Criado por [lkotlarenko](https://github.com/lkotlarenko).
+
+### Support me
+
+Se você gostou do meu trabalho e quer me apoiar, você pode me patrocinar aqui no GitHub. Seu apoio me permitirá focar mais em projetos de código aberto. Essas contribuições me ajudarão a continuar aprendendo, crescendo e contribuindo para o ecossistema de código aberto 💚.
+
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/lkotlarenko?style=social)](https://github.com/sponsors/lkotlarenko)
 
 ## Licença
 
