@@ -44,10 +44,10 @@ Ensure you have the latest version of GIT installed. Download it from the [offic
 
 #### Open a terminal (type `cmd` in the Explorer path of any folder you want to install Gramma on windows) to run the following instructions:
 
-### 2. Clone the Repository (you can do it manually too by clicking on `<> Code` and `Download ZIP` in case you don't want to install git, make sure you extract the files to a folder somewhere)
+### 2. Clone the Repository (you can do it manually too by clicking on `<> Code` and `Download ZIP` (on top of this page) in case you don't want to install git, make sure you extract the files to a folder somewhere)
 
 ```sh
-git clone https://github.com/yourusername/gramma.git
+git clone https://github.com/lkotlarenko/gramma.git
 cd gramma
 ```
 
@@ -72,7 +72,7 @@ Rename `.env.example` to `.env`:
 mv .env.example .env
 ```
 
-Edit the `.env` file with your API_KEY from Groq, replacing `YOUR_GROQ_API_KEY` with your actual key from [GROQ console](https://console.groq.com/keys):
+Edit the `.env` file with your API_KEY from Groq, replacing `YOUR_GROQ_API_KEY` with your actual key from [GROQ console](https://console.groq.com/keys) (you can edit it using notepad):
 
 ### It should look something like this after editing:
 
