@@ -174,8 +174,8 @@ gramma/
 ├── requirements.txt   # Dependências do projeto
 ├── gramma.py          # Script principal
 ├── gramma_starter.bat # Arquivo bat para iniciar o Gramma na bandeja do sistema (crie um atalho para ele para iniciar mais rápido)
-├── README.md          # Documentação do projeto (o que você está lendo agora)
-└── README_PT-BR.md    # Documentação do projeto em Português Brasileiro
+├── README.md          # Documentação do projeto em inglês
+└── README_PT-BR.md    # Documentação do projeto em Português Brasileiro (o que você está lendo agora)
 ```
 
 ## Contribuindo
