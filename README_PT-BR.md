@@ -1,6 +1,8 @@
-# Gramma: processamento de texto rápido com AI usando [GROQ API](https://groq.com/).
+# Gramma: Revolucione sua escrita em qualquer lugar do seu desktop com IA.
 
-Gramma é um app que fica "escutando" a área de transferência e detecta prefixos de comandos personalizados. Quando um comando é detectado, ele envia o texto para a GROQ API usando um prompt personalizado para processar o texto e, em seguida, copia o texto processado de volta para a área de transferência. Este projeto é projetado para ser leve e eficiente, garantindo impacto mínimo no desempenho.
+Gramma é uma aplicação Python inovadora que transforma sua área de transferência em um assistente de texto inteligente. Com capacidades de monitoramento da área de transferência, Gramma identifica prefixos de comando específicos dentro do seu texto copiado. Após o reconhecimento, ele interage de forma transparente com a API GROQ, utilizando prompts personalizados para aprimorar e refinar seu texto. Se você está procurando corrigir erros gramaticais, condensar artigos longos ou processar conteúdo de maneira criativa de formas limitadas apenas pela sua imaginação, Gramma é a solução ideal. É muito fácil adicionar novos comandos e maneiras de processar seus textos!
+
+Desenvolvido com eficiência em mente, Gramma garante uma pegada leve, assegurando um impacto negligenciável no desempenho do seu sistema. Eleve sua escrita e criação de conteúdo com Gramma – onde a conveniência encontra a inteligência.
 
 ## Como Funciona
 

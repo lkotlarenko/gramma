@@ -1,8 +1,10 @@
 **Note:** [Leia a versão em português deste arquivo](https://github.com/lkotlarenko/gramma/blob/main/README_PT-BR.md)
 
-# Gramma: fast AI text processing using [GROQ API](https://groq.com/).
+# Gramma: Revolutionize Your Writing Anywhere with AI.
 
-Gramma is a Python-based clipboard listener that detects custom command prefixes in the clipboard text. When a command is detected, it sends the text to the GROQ API using a custom prompt to process the text, and then it copies the processed text back to the clipboard. This project is designed to be lightweight and efficient, ensuring minimal performance impact.
+Gramma is an innovative Python application that transforms your clipboard into a smart text assistant. With its advanced clipboard monitoring capabilities, Gramma identifies specific command prefixes within your copied text. Upon recognition, it seamlessly interacts with the GROQ API, utilizing tailored prompts to enhance and refine your text. Whether you’re looking to correct grammatical errors, condense lengthy articles, or creatively process content in ways only limited by your imagination, Gramma is your go-to solution. It’s really easy to add new commands and ways of processing!
+
+Designed with efficiency in mind, Gramma ensures a lightweight footprint, guaranteeing a negligible impact on your system’s performance. Elevate your writing and content creation with Gramma – where convenience meets intelligence.
 
 ## How It Works
 
