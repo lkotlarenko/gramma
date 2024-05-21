@@ -12,23 +12,23 @@ Gramma vem com um conjunto de comandos padrão para aprimorar sua experiência d
 
 - `!gf` - **Correção Gramatical**: Melhora a gramática do seu texto.
   ```
-  !gf Eu não posso acreditar que estou vendo isso!
+  !gf Eu não possu acredita que etou vendo isso!
   ```
   Resultado:
   ```
-  Eu mal posso acreditar que estou vendo isso!
+  Eu não posso acreditar que estou vendo isso!
   ```
 
 - `!sm` - **Resumir**: Gera um resumo conciso do texto.
   ```
-  !sm A rápida raposa marrom pula sobre o cão preguiçoso...
+  !sm A degradação do meio ambiente...
   ```
   Resultado:
   ```
   Texto resumido.
   ```
 
-- `!tl` - **Traduzir**: Traduza o texto fornecido.
+- `!tl` - **Traduzir**: Traduza o texto fornecido. (Por padrão o comando traduz de qualquer lingua para Inglês, voce pode editar isso em `commands.py`)
   ```
   !tl Oi, como vai o seu dia?
   ```
