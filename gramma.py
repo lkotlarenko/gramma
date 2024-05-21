@@ -89,7 +89,7 @@ class ClipboardListener:
     def setup_tray_icon(self) -> None:
         icon_path = "src/images/tray_icon.png"
         image = Image.open(icon_path)
-        icon = pystray.Icon("GrammarCorrector", image, "Grammar Corrector", menu=pystray.Menu(item('Exit', self.exit_program)))
+        icon = pystray.Icon("GrammaAI", image, "Gramma AI", menu=pystray.Menu(item('Exit', self.exit_program)))
         icon.run()
 
     def exit_program(self, icon) -> None:
