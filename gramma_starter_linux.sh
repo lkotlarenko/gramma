@@ -1,3 +1,4 @@
 #!/bin/bash
-cd "$(dirname "$0")"
-pythonw gramma.py &
+nohup poetry run python gramma.py >/dev/null 2>&1 &
+disown
+exit

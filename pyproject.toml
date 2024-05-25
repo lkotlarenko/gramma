@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gramma"
+version = "1.0.0"
+description = "Transform your clipboard into a smart text assistant."
+authors = ["Elly <lkotlarenko@proton.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+customtkinter = "^5.2.2"
+groq = "^0.8.0"
+pillow = "^10.3.0"
+plyer = "^2.1.0"
+pyperclip = "^1.8.2"
+pystray = "^0.19.5"
+pywin32 = "^306"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

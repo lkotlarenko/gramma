@@ -1,4 +1,3 @@
 @echo off
-cd %~dp0
-start "" pythonw "gramma.py"
+start /B gramma_to_tray_win.vbs
 exit
