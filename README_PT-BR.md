@@ -1,101 +1,16 @@
 **Note:** [Read the english version of this file](https://github.com/lkotlarenko/gramma/blob/main/README.md)
 
-# Gramma: Revolucione sua Escrita em Qualquer Lugar com IA
+# Gramma: Transforme sua Área de Transferência em um Assistente de Texto Inteligente
 
-Gramma é uma aplicação Python inovadora que transforma sua área de transferência em um assistente de texto inteligente. O app identifica prefixos de comando específicos dentro do texto copiado. Após o reconhecimento, ele interage com a API GROQ, utilizando prompts personalizados para melhorar e refinar seu texto. Seja para corrigir erros gramaticais, condensar artigos longos ou processar conteúdo de maneira criativa, Gramma é a sua solução ideal. É muito fácil adicionar novos comandos e formas de processamento!
-
-Projetado com eficiência em mente, o app garante um impacto mínimo no desempenho do seu sistema. Eleve sua escrita e criação de conteúdo com Gramma – onde conveniência encontra inteligência.
-
-## Comandos Padrão
-
-Gramma vem com um conjunto de comandos padrão para aprimorar sua experiência de processamento de texto. Abaixo está uma lista dos comandos padrão que você pode usar:
-
-- `!gf` - **Correção Gramatical**: Melhora a gramática do seu texto.
-  ```
-  !gf Eu não possu acredita que etou vendo isso!
-  ```
-  Resultado:
-  ```
-  Eu não posso acreditar que estou vendo isso!
-  ```
-
-- `!sm` - **Resumir**: Gera um resumo conciso do texto.
-  ```
-  !sm A degradação do meio ambiente...
-  ```
-  Resultado:
-  ```
-  Texto resumido.
-  ```
-
-- `!tl` - **Traduzir**: Traduza o texto fornecido. (Por padrão o comando traduz de qualquer lingua para Inglês, voce pode editar isso em `commands.py`)
-  ```
-  !tl Oi, como vai o seu dia?
-  ```
-  Resultado:
-  ```
-  Hi, how is your day?
-  ```
-
-- `!df` - **Definir**: Fornece uma definição de uma palavra ou expressão.
-  ```
-  !df serendipity
-  ```
-  Resultado:
-  ```
-  A ocorrência de eventos por acaso de uma maneira feliz ou benéfica.
-  ```
-
-## Adicionando ou Editando Comandos
-
-Adicionar novos comandos ou editar os existentes no Gramma é simples. Siga estes passos:
-
-1. **Adicionar ou Editar Comandos**:
-    - **Localize o arquivo `commands.py`.**
-    - Para adicionar um novo comando, adicione uma nova entrada ao dicionário `commands` com a chave e o prompt apropriados. A chave deve seguir o formato `PROMPT_<COMANDO>`.
-    - Para editar um comando existente, localize o comando desejado no dicionário `commands` e modifique seu prompt.
-
-    Exemplo:
-    ```python
-    commands = {
-        "PROMPT_GF": "You are a multi-language grammar enhancement tool...",
-        "PROMPT_SM": "You are a multi-language AI designed to summarize text...",
-        "PROMPT_TL": "You are a multi-language AI designed to translate text...",
-        "PROMPT_DF": "You are a multi-language AI designed to define words...",
-        "PROMPT_MW": "Você é uma ferramenta que transforma texto em uma forma felina, output o texto recebido em uma forma semelhante a um gato."
-    }
-    ```
-
-2. **Salvar o Arquivo**: Após adicionar ou editar o comando, salve o arquivo `commands.py`.
-3. **Reiniciar o Gramma**: Para que as mudanças tenham efeito, reinicie o Gramma fechando o aplicativo e executando-o novamente.
-4. **Invocar seu novo comando**: Agora você pode usar o novo prefixo de comando. Por exemplo, copiando:
-    ```
-    !mw Eu sou muito legal, gosto de livros, filmes e jogos.
-    ```
-    Resultará em algo semelhante a:
-    ```
-    Miauu, eu sou muito legal, gosto de livroz, filmez e jogoz! *esfrega na perna*
-    ```
-
-Seguindo estes passos, você pode facilmente personalizar o Gramma para atender às suas necessidades específicas e adicionar novas funcionalidades conforme necessário.
-
-## Como Funciona
-
-1. **Monitoramento da Área de Transferência**: Monitora continuamente a área de transferência para mudanças.
-2. **Detecção de Comandos**: Verifica se o texto da área de transferência começa com algum prefixo de comando predefinido.
-3. **Interação com API**: Envia o texto (excluindo o prefixo do comando) para a API GROQ com um prompt personalizado correspondente.
-4. **Processamento de Texto**: A IA processa o texto e retorna a versão modificada.
-5. **Atualização da Área de Transferência**: O texto processado é copiado de volta para a área de transferência.
-6. **Notificação**: Exibe uma notificação sobre o processamento bem-sucedido do texto.
+Gramma é uma app inovador em Python que transforma sua área de transferência em um assistente de texto inteligente. Com suas avançadas capacidades de monitoramento da área de transferência, o Gramma identifica prefixos de comandos específicos dentro do texto copiado. E, ao reconhecer esses prefixos, ele interage com a API GROQ, utilizando prompts personalizados para aprimorar e refinar seu texto usando IA. Quer você esteja procurando corrigir erros gramaticais, condensar artigos longos ou processar criativamente textos de várias maneiras, o Gramma é a solução ideal.
 
 ## Funcionalidades
 
-- **Carregamento Dinâmico de Comandos**: Adicione novos comandos facilmente via `commands.py`.
-- **Totalmente Gratuito e Open Source**: Veja e modifique qualquer coisa sem limites.
-- **Foco na Privacidade**: Nenhum dado da área de transferência é processado fora dos prefixos de comando.
-- **Chamadas de API Assíncronas**: Manipule solicitações de API eficientemente sem bloquear a thread principal.
-- **Design Minimalista**: Sem interface, apenas um ícone na bandeja do sistema com uma opção de saída.
-- **Tratamento de Erros e Notificações**: Notificações informativas para erros e limitação de taxa.
+- **Carregamento Dinâmico de Comandos**: Adicione novos comandos facilmente em uma interface gráfica.
+- **Totalmente Grátis e Open Source**: Veja e modifique qualquer coisa sem limitações.
+- **Foco na Privacidade**: Os dados da área de transferência são processados SOMENTE SE um prefixo de comando for detectado.
+- **Design Minimalista**: Leve e focado na facilidade de uso.
+- **Notificações**: Notificações informativas.
 
 ## Requisitos
 
@@ -104,86 +19,76 @@ Seguindo estes passos, você pode facilmente personalizar o Gramma para atender 
 
 ## Instalação
 
-1. **Instale o Python**
+1. **Baixe o Código Fonte**
+   
+   Visite a [última versão](https://github.com/lkotlarenko/gramma/releases/latest) e baixe o arquivo "Source code (zip)".
+   
+2. **Extraia o Arquivo Zip**
+   
+   Extraia o conteúdo do arquivo zip baixado para um diretório de sua escolha.
+   
+3. **Instale as Dependências**
+   
+   Para Windows:
+   - Abra a pasta extraída e clique duas vezes em `install_windows.bat`.
+   - Uma janela de terminal será aberta e instalará automaticamente as dependências necessárias e criará um atalho na área de trabalho para o Gramma.
+   
+   Para Linux/macOS:
+   - Abra um terminal e navegue até a pasta extraída.
+   - Execute o seguinte comando: `bash install_linux.sh`
+   - Isso instalará as dependências necessárias e criará um atalho na área de trabalho para o Gramma.
 
-Certifique-se de ter a versão mais recente do Python instalada. Baixe-a do [site oficial do Python](https://www.python.org/downloads/).
+## Configuração
 
-1.5. **(Opcional) Instale o GIT**
+Após a instalação, execute o novo atalho do Gramma em sua área de trabalho. Você encontrará o ícone do Gramma na bandeja do sistema (área de notificação).
 
-Certifique-se de ter a versão mais recente do GIT instalada. Baixe-a do [site oficial do GIT](https://git-scm.com/downloads).
+1. **Clique com o botão direito** no ícone do Gramma na bandeja do sistema.
+2. Selecione **"Setup"**.
+3. Insira sua **Chave de API GROQ** (obtenha uma gratuitamente [aqui](https://console.groq.com/keys)).
+4. (Opcional) Altere o **Modelo de IA** se desejar.
+5. Clique em **"Save"**.
+6. Confirme
 
-#### Abra um terminal (digite `cmd` no caminho do Explorer de qualquer pasta onde você deseja instalar o Gramma no Windows) para executar as seguintes instruções:
-
-1. **Clone o Repositório** (se você não instalou o git, pode baixá-lo manualmente clicando em `<> Code` e `Download ZIP` (no topo desta página), e extraia tudo em uma pasta)
-
-```sh
-git clone https://github.com/lkotlarenko/gramma.git
-cd gramma
-```
-
-3. **Crie e Ative um Ambiente Virtual**
-
-```sh
-python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-```
-
-4. **Instale os Pacotes Necessários**
-
-```sh
-pip install -r requirements.txt
-```
-
-5. **Configure Variáveis de Ambiente**
-
-Renomeie `.env.example` para `.env`:
-
-```sh
-mv .env.example .env
-```
-
-Edite o arquivo `.env` com sua API_KEY do Groq, substituindo `YOUR_GROQ_API_KEY` pela sua chave real disponivel no [console GROQ](https://console.groq.com/keys) (você pode editá-lo usando o notepad).
-
-```env
-GROQ_API_KEY=gsk_y**********************************************
-```
+O Gramma está pronto para uso!
 
 ## Uso
 
-### Inicie o Gramma
+1. **Copie o texto** para sua área de transferência com um dos prefixos de comando (por exemplo, `!gf Seu texto aqui` para correção gramatical).
+2. **Aguarde a notificação** indicando que o texto foi processado.
+3. O texto processado será automaticamente copiado de volta para sua área de transferência.
 
-No Windows você pode criar um atalho para o arquivo `gramma_starter.bat` e movê-lo para qualquer lugar para executar o Gramma.
-E no Linux e Mac você pode rodar ou diretamente pelo script `gramma.py` em um terminal, ou usar o shell script `gramma_starter_linux.sh`.
+## Comandos Padrão
 
-### Ícone da Bandeja
+O Gramma vem com um conjunto de comandos padrão para melhorar sua experiência de processamento de texto:
 
-O app será minimizado para a bandeja do sistema. Clique com o botão direito do mouse no ícone da bandeja para sair.
+- `!gf` - **Correção Gramatical**: Aperfeiçoa a gramática do seu texto.
+- `!sm` - **Resumo**: Gera um resumo sucinto do texto.
+- `!tl` - **Tradução**: Traduza o texto fornecido.
+- `!df` - **Definir**: Fornece a definição de uma palavra ou expressão dada.
 
-### Usando Comandos
+## Adicionando ou Editando Comandos
 
-Copie o texto para sua área de transferência com um dos prefixos de comando (por exemplo, `!gf Seu texto aqui` para correção gramatical).
+Adicionar novos comandos ou editar os existentes no Gramma é simples:
 
-#### Como alterar o modelo Groq usado no Gramma:
+1. **Clique com o botão direito** no ícone do Gramma na bandeja do sistema.
+2. Selecione **"Edit Commands"**.
+3. Na janela "Editar Comandos", você pode:
+   - **Adicionar um novo comando**: Clique no botão "Add Command" e insira o prefixo e o prompt do comando (o prefixo deve ter apenas duas letras que não estejam em uso por outros prefixos).
+   - **Editar um comando existente**: Modifique o prefixo ou o prompt do comando conforme desejar.
+   - **Excluir um comando**: Exclua qualquer comando da lista clicando no botão vermelho "X".
+4. Clique em **"Save"** para aplicar as alterações.
+5. Confirme
 
-Por padrão, o Gramma usa o modelo llama3-70b-8192, você pode editar isso no arquivo `.env` substituindo o modelo dentro de `GROQ_MODEL` por qualquer outro modelo disponível no [console GROQ](https://console.groq.com/docs/models).
+Os novos comandos ou comandos editados estarão disponíveis para uso imediatamente.
 
-## Estrutura do Projeto
+## Como Funciona
 
-```plaintext
-gramma/
-│
-├── src/
-│    ├── images/            # Pasta para armazenar imagens do aplicativo (apenas o ícone no momento)
-│    └── config.py          # Variáveis como nome do aplicativo e mais
-├── .env                    # Variáveis de ambiente (onde você coloca sua chave API)
-├── commands.py             # Onde você edita ou adiciona comandos
-├── gramma.py               # Script principal
-├── gramma_starter.bat      # Arquivo bat para iniciar o Gramma na bandeja do sistema (crie um atalho para ele para iniciar mais rápido)
-├── gramma_starter_linux.sh # Shell script pra rodar Gramma no Linux or Mac 
-├── README.md               # Documentação do projeto em inglês
-├── README_PT-BR.md         # Documentação do projeto em Português Brasileiro (o que você está lendo agora)
-└── requirements.txt        # Dependências do projeto
-```
+1. **Monitoramento da Área de Transferência**: Gramma monitora continuamente a área de transferência em busca de alterações.
+2. **Detecção de Comandos**: Verifica se o texto da área de transferência começa com algum dos prefixos de comandos predefinidos.
+3. **Interação com API**: Gramma envia o texto (excluindo o prefixo do comando) para a API GROQ AI com um prompt personalizado correspondente.
+4. **Processamento de Texto**: A IA processa o texto e retorna a versão modificada.
+5. **Atualização da Área de Transferência**: O texto processado é copiado de volta para a área de transferência.
+6. **Notificação**: Uma notificação é exibida sobre o processamento bem-sucedido do texto.
 
 ## Contribuindo
 
@@ -193,7 +98,7 @@ Contribuições são bem-vindas! Por favor, faça um fork do repositório e envi
 
 Criado por [lkotlarenko](https://github.com/lkotlarenko).
 
-### Support me
+### Apoie-me
 
 Se você gostou do meu trabalho e quer me apoiar, você pode me patrocinar aqui no GitHub. Seu apoio me permitirá focar mais em projetos de código aberto. Essas contribuições me ajudarão a continuar aprendendo, crescendo e contribuindo para o ecossistema de código aberto 💚.
 
@@ -201,8 +106,70 @@ Se você gostou do meu trabalho e quer me apoiar, você pode me patrocinar aqui 
 
 ## Licença
 
-Este projeto é licenciado sob a Licença MIT.
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
 
 ## Links
 
-- [Site do GROQ](https://groq.com/)
+- [Site do Groq](https://groq.com/)
+- [Console do Groq](https://console.groq.com/)
+
+## Estrutura do Projeto
+
+```plaintext
+gramma/
+│
+├── src/
+│   ├──core/
+│   │  ├── clipboard_listener.py
+│   │  ├── command_processor.py
+│   │  ├── instance_manager.py
+│   │  └── tray_icon.py
+│   │
+│   ├── data/
+│   │   ├── __init__.py
+│   │   └── data_manager.py
+│   │
+│   ├── gui/
+│   │   ├── base_page.py
+│   │   ├── edit_commands_page.py
+│   │   └── setup_page.py
+│   │
+│   ├── images/
+│   │   ├── app_icon.ico
+│   │   └── tray_icon.png
+│   │
+│   ├── managers/
+│   │   └── instance_manager.py
+│   │
+│   ├── utils.py
+│   └── config.py
+│
+├── tests/
+│   ├──core/
+│   │  └── __init__.py
+│   │
+│   ├── data/
+│   │   ├── __init__.py
+│   │   └── test_data_manager.py
+│   │
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   ├── edit_commands_page.py
+│   │   └── setup_page.py
+│   ├── __init__.py
+│   └── conftest.py
+│
+├── commands.json
+├── gramma.py
+├── install_linux.sh
+├── install_windows.bat
+├── gramma_starter_linux.sh
+├── gramma_starter.bat
+├── gramma_to_tray_win.vbs
+├── LICENSE
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+├── README_PT-BR.md
+└── settings.json
+```

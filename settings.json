@@ -1,0 +1,4 @@
+{
+  "GROQ_API_KEY": "YOUR_GROQ_API_KEY_GOES_HERE",
+  "GROQ_MODEL": "llama3-70b-8192"
+}

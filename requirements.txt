@@ -1,7 +1,0 @@
-pyperclip
-python-dotenv
-groq
-pystray
-Pillow
-plyer
-pywin32
