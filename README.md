@@ -1,101 +1,16 @@
 **Nota:** [Leia a versão em português deste arquivo](https://github.com/lkotlarenko/gramma/blob/main/README_PT-BR.md)
 
-# Gramma: Revolutionize Your Writing Anywhere with AI
+# Gramma: Transform Your Clipboard into a Smart Text Assistant
 
-Gramma is an innovative Python application that transforms your clipboard into a smart text assistant. With its advanced clipboard monitoring capabilities, Gramma identifies specific command prefixes within your copied text. Upon recognition, it seamlessly interacts with the GROQ API, utilizing tailored prompts to enhance and refine your text. Whether you’re looking to correct grammatical errors, condense lengthy articles, or creatively process content in ways only limited by your imagination, Gramma is your go-to solution. It’s easy to add new commands and ways of processing!
-
-Designed with efficiency in mind, Gramma ensures a lightweight footprint, guaranteeing a negligible impact on your system’s performance. Elevate your writing and content creation with Gramma – where convenience meets intelligence.
-
-## Default Commands
-
-Gramma comes with a set of default commands to enhance your text processing experience. Below is a list of the default commands you can use:
-
-- `!gf` - **Grammar Fix**: Enhances grammar in your text.
-  ```
-  !gf I can’t hardly believe I’m seing this!
-  ```
-  Result:
-  ```
-  I can hardly believe I’m seeing this!
-  ```
-
-- `!sm` - **Summarize**: Generates a succinct summary of the text.
-  ```
-  !sm The quick brown fox jumps over the lazy dog...
-  ```
-  Result:
-  ```
-  Summarized text.
-  ```
-
-- `!tl` - **Translate**: Translates the provided text.
-  ```
-  !tl Oi, como vai o seu dia?
-  ```
-  Result:
-  ```
-  Hi, how is your day?
-  ```
-
-- `!df` - **Define**: Provides a definition of a given word or expression.
-  ```
-  !df serendipity
-  ```
-  Result:
-  ```
-  The occurrence of events by chance in a happy or beneficial way.
-  ```
-
-## Adding or Editing Commands
-
-Adding new commands or editing existing ones in Gramma is straightforward. Follow these steps:
-
-1. **Add or Edit Commands**:
-    - **Locate the `commands.py` file.**
-    - To add a new command, add a new entry to the `commands` dictionary with the appropriate key and prompt. The key should follow the format `PROMPT_<COMMAND>`.
-    - To edit an existing command, locate the desired command in the `commands` dictionary and modify its prompt.
-
-    Example:
-    ```python
-    commands = {
-        "PROMPT_GF": "You are a multi-language grammar enhancement tool...",
-        "PROMPT_SM": "You are a multi-language AI designed to summarize text...",
-        "PROMPT_TL": "You are a multi-language AI designed to translate text...",
-        "PROMPT_DF": "You are a multi-language AI designed to define words...",
-        "PROMPT_MW": "You are a tool that catfy text, output the received text in a cat-like form."
-    }
-    ```
-
-2. **Save the File**: After adding or editing the command, save the `commands.py` file.
-3. **Restart Gramma**: For the changes to take effect, restart Gramma by closing the application and running it again.
-4. **Invoke your new command**: Now you can use the new command prefix. For example, copying:
-    ```
-    !mw I'm really cool, I like books, movies, and games.
-    ```
-    Will result in something similar to:
-    ```
-    Meowww, I'm reawy cowl, I wuv bookz, moviez and gamz! *rubs against leg*
-    ```
-
-By following these steps, you can easily customize Gramma to suit your specific needs and add new functionality as required.
-
-## How It Works
-
-1. **Clipboard Monitoring**: Continuously monitors the clipboard for changes.
-2. **Command Detection**: Checks if the clipboard text starts with any predefined command prefixes.
-3. **API Interaction**: Sends the text (excluding the command prefix) to the GROQ API with a corresponding custom prompt.
-4. **Text Processing**: The AI processes the text and returns the modified version.
-5. **Clipboard Update**: The processed text is copied back to the clipboard.
-6. **Notification**: Displays a notification about the successful processing of the text.
+Gramma is an innovative Python application that transforms your clipboard into a smart text assistant. With its advanced clipboard monitoring capabilities, Gramma identifies specific command prefixes within your copied text. Upon recognition, it seamlessly interacts with the GROQ AI API, utilizing tailored prompts to enhance and refine your text. Whether you're looking to correct grammatical errors, condense lengthy articles, or creatively process content in various ways, Gramma is your go-to solution.
 
 ## Features
 
-- **Dynamic Command Loading**: Easily add new commands via `commands.py`.
-- **Fully Free and Open source**: View and modify anything without any limits.
-- **Privacy Focus**: No clipboard data is processed outside of command prefixes.
-- **Asynchronous API Calls**: Efficiently handle API requests without blocking the main thread.
-- **Minimalist Design**: No interface, only a system tray icon with an exit option.
-- **Error Handling and Notifications**: Informative notifications for errors and rate limiting.
+- **Dynamic Command Loading**: Easily add new commands using a GUI interface.
+- **Fully Free and Open Source**: View and modify anything without any limits.
+- **Privacy Focus**: Clipboard data is processed ONLY IF a command prefix is detected.
+- **Minimalist Design**: Lightweight and focused on ease to use.
+- **Notifications**: Informative notifications.
 
 ## Requirements
 
@@ -104,88 +19,76 @@ By following these steps, you can easily customize Gramma to suit your specific 
 
 ## Installation
 
-1. **Install Python**
+1. **Download the Source Code**
+   
+   Visit the [latest release](https://github.com/lkotlarenko/gramma/releases/latest) and download the "Source code (zip)" file.
+   
+2. **Extract the Zip File**
+   
+   Extract the contents of the downloaded zip file to a directory of your choice.
+   
+3. **Install Dependencies**
+   
+   For Windows:
+   - Open the extracted folder and double-click on `install_windows.bat`.
+   - A terminal window will open and automatically install the required dependencies and create a desktop shortcut for Gramma.
+   
+   For Linux/macOS:
+   - Open a terminal and navigate to the extracted folder.
+   - Run the following command: `bash install_linux.sh`
+   - This will install the required dependencies and create a desktop shortcut for Gramma.
 
-Ensure you have the latest version of Python installed. Download it from the [official Python website](https://www.python.org/downloads/).
+## Setup
 
-1.5. **(Optional) Install GIT**
+After installation, run the newly created Gramma shortcut in your desktop, you will find the Gramma icon in your system tray (notification area).
 
-Ensure you have the latest version of GIT installed. Download it from the [official GIT website](https://git-scm.com/downloads).
+1. **Right-click** on the Gramma icon in the system tray.
+2. Select **"Setup"**.
+3. Enter your **GROQ API Key** (get one for free [here](https://console.groq.com/keys)).
+4. (Optional) Change the **AI Model** if desired.
+5. Click **"Save"**.
+6. Confirm
 
-#### Open a terminal (type `cmd` in the Explorer path of any folder you want to install Gramma on Windows) to run the following instructions:
-
-1. **Clone the Repository** (if you haven't installed git, you can download it manually by clicking on `<> Code` and `Download ZIP` (on top of this page), and extract everything into a folder)
-
-
-```sh
-git clone https://github.com/lkotlarenko/gramma.git
-cd gramma
-```
-
-3. **Create and Activate a Virtual Environment**
-
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-4. **Install the Required Packages**
-
-```sh
-pip install -r requirements.txt
-```
-
-5. **Configure Environment Variables**
-
-Rename `.env.example` to `.env`:
-
-```sh
-mv .env.example .env
-```
-
-Edit the `.env` file with your API_KEY from Groq, replacing `YOUR_GROQ_API_KEY` with your actual key from [GROQ console](https://console.groq.com/keys) (you can edit it using notepad).
-
-```env
-GROQ_API_KEY=gsk_y**********************************************
-```
+Gramma is now ready to use!
 
 ## Usage
 
-### Start Gramma
+1. **Copy text** to your clipboard with one of the command prefixes (e.g., `!gf Your text here` for grammar correction).
+2. **Wait for the notification** indicating that the text has been processed.
+3. The processed text will be automatically copied back to your clipboard.
 
-On Windows you can create a shortcut for the file `gramma_starter.bat` and move it to any place to run Gramma.
-And on Linux and Mac you can run it either in a terminal using the direct `gramma.py`, or using the `gramma_starter_linux.sh`.
+## Default Commands
 
-### Tray Icon
+Gramma comes with a set of default commands to enhance your text processing experience:
 
-The app will minimize to the system tray. Right-click the tray icon for exiting.
+- `!gf` - **Grammar Fix**: Enhances grammar in your text.
+- `!sm` - **Summarize**: Generates a succinct summary of the text.
+- `!tl` - **Translate**: Translates the provided text.
+- `!df` - **Define**: Provides a definition of a given word or expression.
 
-### Using Commands
+## Adding or Editing Commands
 
-Copy text to your clipboard with one of the command prefixes (e.g., `!gf Your text here` for grammar correction).
+Adding new commands or editing existing ones in Gramma is straightforward:
 
-#### How to change the Groq model used in Gramma:
+1. **Right-click** on the Gramma icon in the system tray.
+2. Select **"Edit Commands"**.
+3. In the "Edit Commands" window, you can:
+   - **Add a new command**: Click the "Add Command" button and enter the command prefix and prompt (the prefix is only two letters that are not in use by other prefixes).
+   - **Edit an existing command**: Modify commands prefix or prompt as desired.
+   - **Delete a command**: Delete any command from the list by clicking on the red "X" button.
+4. Click **"Save"** to apply the changes.
+5. Confirm
 
-By default, Gramma uses llama3-70b-8192 model, you edit this in the `.env` file by replacing llama inside `GROQ_MODEL` with any other model available in [GROQ console](https://console.groq.com/docs/models).
+The new or edited commands will be available for use immediately.
 
-## Project Structure
+## How It Works
 
-```plaintext
-gramma/
-│
-├── src/
-│    ├── images/            # Folder to store app images (only the icon at the moment)
-│    └── config.py          # Variables like app_name and more
-├── .env                    # Environment variables (where you put your API key)
-├── commands.py             # Where you edit or add commands
-├── gramma.py               # Main script
-├── gramma_starter.bat      # Bat file to start Gramma in the system tray (create a shortcut to it to launch it faster)
-├── gramma_starter_linux.sh # Shell script to run Gramma on Linux or Mac 
-├── LICENSE                 # Project MIT License file
-├── README.md               # Project documentation (what you are reading right now)
-├── README_PT-BR.md         # Project documentation in Brazilian Portuguese
-└── requirements.txt        # Project dependencies
-```
+1. **Clipboard Monitoring**: Gramma continuously monitors the clipboard for changes.
+2. **Command Detection**: It checks if the clipboard text starts with any predefined command prefixes.
+3. **API Interaction**: Gramma sends the text (excluding the command prefix) to the GROQ AI API with a corresponding custom prompt.
+4. **Text Processing**: The AI processes the text and returns the modified version.
+5. **Clipboard Update**: The processed text is copied back to the clipboard.
+6. **Notification**: A notification is displayed about the successful processing of the text.
 
 ## Contributing
 
@@ -195,7 +98,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 Created by [lkotlarenko](https://github.com/lkotlarenko).
 
-### Support me
+### Support Me
 
 If you liked my work and want to support me, you can sponsor me here on GitHub. Your support will enable me to focus more on open-source projects. Those contributions will help me continue to learn, grow, and contribute to the open-source ecosystem 💚.
 
@@ -203,8 +106,70 @@ If you liked my work and want to support me, you can sponsor me here on GitHub. 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Links
 
-- [GROQ Website](https://groq.com/)
+- [Groq Website](https://groq.com/)
+- [Groq Console](https://console.groq.com/)
+
+## Project Structure
+
+```plaintext
+gramma/
+│
+├── src/
+│   ├──core/
+│   │  ├── clipboard_listener.py
+│   │  ├── command_processor.py
+│   │  ├── instance_manager.py
+│   │  └── tray_icon.py
+│   │
+│   ├── data/
+│   │   ├── __init__.py
+│   │   └── data_manager.py
+│   │
+│   ├── gui/
+│   │   ├── base_page.py
+│   │   ├── edit_commands_page.py
+│   │   └── setup_page.py
+│   │
+│   ├── images/
+│   │   ├── app_icon.ico
+│   │   └── tray_icon.png
+│   │
+│   ├── managers/
+│   │   └── instance_manager.py
+│   │
+│   ├── utils.py
+│   └── config.py
+│
+├── tests/
+│   ├──core/
+│   │  └── __init__.py
+│   │
+│   ├── data/
+│   │   ├── __init__.py
+│   │   └── test_data_manager.py
+│   │
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   ├── edit_commands_page.py
+│   │   └── setup_page.py
+│   ├── __init__.py
+│   └── conftest.py
+│
+├── commands.json
+├── gramma.py
+├── install_linux.sh
+├── install_windows.bat
+├── gramma_starter_linux.sh
+├── gramma_starter.bat
+├── gramma_to_tray_win.vbs
+├── LICENSE
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+├── README_PT-BR.md
+└── settings.json
+```
