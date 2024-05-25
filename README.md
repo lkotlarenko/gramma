@@ -1,12 +1,12 @@
-**Nota:** [Leia a versão em português deste arquivo](https://github.com/lkotlarenko/gramma/blob/main/README_PT-BR.md)
+🌐 Leia a versão em português deste arquivo [aqui](https://github.com/lkotlarenko/gramma/blob/main/README_PT-BR.md).
 
-# Gramma: Transform Your Clipboard into a Smart Text Assistant
+# Gramma: Transform your CTRL-C / CTRL-V into a Smart Text Assistant
 
-Gramma is an innovative Python application that transforms your clipboard into a smart text assistant. With its advanced clipboard monitoring capabilities, Gramma identifies specific command prefixes within your copied text. Upon recognition, it seamlessly interacts with the GROQ AI API, utilizing tailored prompts to enhance and refine your text. Whether you're looking to correct grammatical errors, condense lengthy articles, or creatively process content in various ways, Gramma is your go-to solution.
+Gramma is an innovative Python app that transforms your clipboard into a smart text assistant. With its advanced clipboard monitoring capabilities, Gramma identifies specific command prefixes within your copied text. Upon recognition, it seamlessly interacts with the GROQ AI API, utilizing tailored prompts to enhance and refine your text. Whether you're looking to correct grammatical errors, condense lengthy articles, or creatively process content in various ways, Gramma is your go-to solution.
 
 ## Features
 
-- **Dynamic Command Loading**: Easily add new commands using a GUI interface.
+- **Dynamic Command Loading**: Easily add new commands using a simple GUI interface.
 - **Fully Free and Open Source**: View and modify anything without any limits.
 - **Privacy Focus**: Clipboard data is processed ONLY IF a command prefix is detected.
 - **Minimalist Design**: Lightweight and focused on ease to use.
@@ -19,15 +19,19 @@ Gramma is an innovative Python application that transforms your clipboard into a
 
 ## Installation
 
-1. **Download the Source Code**
+1. **Install Python**
+
+   Ensure you have the latest version of Python installed. Download it from the [official Python website](https://www.python.org/downloads/).
+
+2. **Download the Source Code**
    
    Visit the [latest release](https://github.com/lkotlarenko/gramma/releases/latest) and download the "Source code (zip)" file.
    
-2. **Extract the Zip File**
+3. **Extract the Zip File**
    
    Extract the contents of the downloaded zip file to a directory of your choice.
    
-3. **Install Dependencies**
+4. **Install Dependencies**
    
    For Windows:
    - Open the extracted folder and double-click on `install_windows.bat`.
@@ -45,7 +49,7 @@ After installation, run the newly created Gramma shortcut in your desktop, you w
 1. **Right-click** on the Gramma icon in the system tray.
 2. Select **"Setup"**.
 3. Enter your **GROQ API Key** (get one for free [here](https://console.groq.com/keys)).
-4. (Optional) Change the **AI Model** if desired.
+4. (Optional) Change the **AI Model** if desired (see the available ones [here](https://console.groq.com/docs/models)).
 5. Click **"Save"**.
 6. Confirm
 

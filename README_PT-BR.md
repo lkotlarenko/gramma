@@ -1,74 +1,79 @@
-**Note:** [Read the english version of this file](https://github.com/lkotlarenko/gramma/blob/main/README.md)
+🌐 Leia a versão em inglês deste arquivo [aqui](https://github.com/lkotlarenko/gramma/blob/main/README.md).
 
-# Gramma: Transforme sua Área de Transferência em um Assistente de Texto Inteligente
+# Gramma: Transforme seu CTRL-C / CTRL-V em um Assistente de Texto Inteligente
 
-Gramma é uma app inovador em Python que transforma sua área de transferência em um assistente de texto inteligente. Com suas avançadas capacidades de monitoramento da área de transferência, o Gramma identifica prefixos de comandos específicos dentro do texto copiado. E, ao reconhecer esses prefixos, ele interage com a API GROQ, utilizando prompts personalizados para aprimorar e refinar seu texto usando IA. Quer você esteja procurando corrigir erros gramaticais, condensar artigos longos ou processar criativamente textos de várias maneiras, o Gramma é a solução ideal.
+O Gramma é um app inovador em Python que transforma sua área de transferência em um assistente de texto inteligente. Com suas avançadas capacidades de monitoramento da área de transferência, o Gramma identifica prefixos de comandos específicos dentro do texto copiado. E, ao reconhecer esses prefixos, ele interage com a API GROQ, utilizando prompts personalizados para aprimorar e refinar seu texto usando IA. Seja para corrigir erros gramaticais, condensar artigos longos ou processar criativamente textos de várias maneiras, o Gramma é a ferramenta ideal.
 
 ## Funcionalidades
 
-- **Carregamento Dinâmico de Comandos**: Adicione novos comandos facilmente em uma interface gráfica.
-- **Totalmente Grátis e Open Source**: Veja e modifique qualquer coisa sem limitações.
-- **Foco na Privacidade**: Os dados da área de transferência são processados SOMENTE SE um prefixo de comando for detectado.
-- **Design Minimalista**: Leve e focado na facilidade de uso.
-- **Notificações**: Notificações informativas.
+- **Carregamento Dinâmico de Comandos**: Adicione novos comandos facilmente através de uma interface gráfica intuitiva.
+- **Totalmente Gratuito e Open Source**: Explore e modifique qualquer parte do código sem restrições.
+- **Foco na Privacidade**: Seus dados da área de transferência são processados **SOMENTE** se um prefixo de comando for detectado.
+- **Design Minimalista**: Interface leve e focada na usabilidade.
+- **Notificações**: Receba notificações informativas e úteis.
 
 ## Requisitos
 
-- Python 3.7+
+- Python 3.7 ou superior
 - Chave de API do Groq (obtenha uma gratuitamente [aqui](https://console.groq.com/keys))
 
 ## Instalação
 
-1. **Baixe o Código Fonte**
+1. **Instale o Python**
+
+   Garanta que você tenha a versão mais recente do Python instalada. Baixe-a do [site oficial do Python](https://www.python.org/downloads/).
+
+2. **Baixe o Código Fonte**
    
-   Visite a [última versão](https://github.com/lkotlarenko/gramma/releases/latest) e baixe o arquivo "Source code (zip)".
+   Acesse a [última versão](https://github.com/lkotlarenko/gramma/releases/latest) e baixe o arquivo "Source code (zip)".
    
-2. **Extraia o Arquivo Zip**
+3. **Extraia o Arquivo Zip**
    
-   Extraia o conteúdo do arquivo zip baixado para um diretório de sua escolha.
+   Descompacte o conteúdo do arquivo zip baixado em um diretório de sua preferência.
    
-3. **Instale as Dependências**
+4. **Instale o Gramma**
    
    Para Windows:
-   - Abra a pasta extraída e clique duas vezes em `install_windows.bat`.
-   - Uma janela de terminal será aberta e instalará automaticamente as dependências necessárias e criará um atalho na área de trabalho para o Gramma.
+   - Abra a pasta descompactada e dê um duplo clique em `install_windows.bat`.
+   - Um terminal será aberto e instalará automaticamente as dependências necessárias, além de criar um atalho na área de trabalho para o Gramma.
    
    Para Linux/macOS:
-   - Abra um terminal e navegue até a pasta extraída.
-   - Execute o seguinte comando: `bash install_linux.sh`
+   - Abra um terminal e navegue até a pasta descompactada.
+   - Execute o comando: `bash install_linux.sh`
    - Isso instalará as dependências necessárias e criará um atalho na área de trabalho para o Gramma.
 
 ## Configuração
 
-Após a instalação, execute o novo atalho do Gramma em sua área de trabalho. Você encontrará o ícone do Gramma na bandeja do sistema (área de notificação).
+Após a instalação, execute o atalho do Gramma na sua área de trabalho. Você encontrará o ícone do Gramma na bandeja do sistema (área de notificação).
 
 1. **Clique com o botão direito** no ícone do Gramma na bandeja do sistema.
 2. Selecione **"Setup"**.
 3. Insira sua **Chave de API GROQ** (obtenha uma gratuitamente [aqui](https://console.groq.com/keys)).
-4. (Opcional) Altere o **Modelo de IA** se desejar.
+4. (Opcional) Altere o **Modelo de IA** se desejar (confira os disponíveis [aqui](https://console.groq.com/docs/models)).
 5. Clique em **"Save"**.
 6. Confirme
 
-O Gramma está pronto para uso!
+O Gramma está pronto para ser utilizado!
 
 ## Uso
 
 1. **Copie o texto** para sua área de transferência com um dos prefixos de comando (por exemplo, `!gf Seu texto aqui` para correção gramatical).
-2. **Aguarde a notificação** indicando que o texto foi processado.
+2. **Aguarde a notificação** que indica que o texto foi processado.
 3. O texto processado será automaticamente copiado de volta para sua área de transferência.
 
 ## Comandos Padrão
 
-O Gramma vem com um conjunto de comandos padrão para melhorar sua experiência de processamento de texto:
+O Gramma vem com um conjunto de comandos padrão para otimizar sua experiência de processamento de texto:
+_(por padrão as prompts não especificam língua, mas os modelos tendem a usar inglês, você pode alterar isso facilmente adicionando algo como "Responda apenas em PT-BR" no final delas)_
 
-- `!gf` - **Correção Gramatical**: Aperfeiçoa a gramática do seu texto.
-- `!sm` - **Resumo**: Gera um resumo sucinto do texto.
-- `!tl` - **Tradução**: Traduza o texto fornecido.
-- `!df` - **Definir**: Fornece a definição de uma palavra ou expressão dada.
+- `!gf` - **Correção Gramatical**: Melhora a gramática do seu texto.
+- `!sm` - **Resumo**: Cria um resumo conciso do texto.
+- `!tl` - **Tradução**: Traduz o texto fornecido.
+- `!df` - **Definir**: Oferece a definição de uma palavra ou expressão.
 
 ## Adicionando ou Editando Comandos
 
-Adicionar novos comandos ou editar os existentes no Gramma é simples:
+Adicionar novos comandos ou editar os existentes no Gramma é fácil:
 
 1. **Clique com o botão direito** no ícone do Gramma na bandeja do sistema.
 2. Selecione **"Edit Commands"**.
@@ -79,24 +84,24 @@ Adicionar novos comandos ou editar os existentes no Gramma é simples:
 4. Clique em **"Save"** para aplicar as alterações.
 5. Confirme
 
-Os novos comandos ou comandos editados estarão disponíveis para uso imediatamente.
+Os novos comandos ou comandos editados estarão disponíveis imediatamente para uso.
 
 ## Como Funciona
 
-1. **Monitoramento da Área de Transferência**: Gramma monitora continuamente a área de transferência em busca de alterações.
-2. **Detecção de Comandos**: Verifica se o texto da área de transferência começa com algum dos prefixos de comandos predefinidos.
-3. **Interação com API**: Gramma envia o texto (excluindo o prefixo do comando) para a API GROQ AI com um prompt personalizado correspondente.
-4. **Processamento de Texto**: A IA processa o texto e retorna a versão modificada.
-5. **Atualização da Área de Transferência**: O texto processado é copiado de volta para a área de transferência.
-6. **Notificação**: Uma notificação é exibida sobre o processamento bem-sucedido do texto.
+1. **Monitoramento da Área de Transferência**: O Gramma monitora continuamente a área de transferência em busca de alterações.
+2. **Detecção de Comandos**: Verifica se o texto copiado inicia com algum dos prefixos de comandos predefinidos.
+3. **Interação com a API**: O Gramma envia o texto (excluindo o prefixo do comando) para a API GROQ AI com um prompt personalizado correspondente.
+4. **Processamento de Texto**: A IA processa o texto e retorna a versão aprimorada.
+5. **Atualização da Área de Transferência**: O texto aprimorado é copiado de volta para a área de transferência.
+6. **Notificação**: Uma notificação é exibida informando sobre o sucesso no processamento do texto.
 
 ## Contribuindo
 
-Contribuições são bem-vindas! Por favor, faça um fork do repositório e envie um pull request.
+Contribuições são sempre bem-vindas! Faça um fork do repositório e envie um pull request.
 
 ## Autor
 
-Criado por [lkotlarenko](https://github.com/lkotlarenko).
+Desenvolvido por [lkotlarenko](https://github.com/lkotlarenko).
 
 ### Apoie-me
 
@@ -106,7 +111,7 @@ Se você gostou do meu trabalho e quer me apoiar, você pode me patrocinar aqui 
 
 ## Licença
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto está sob a [Licença MIT](LICENSE).
 
 ## Links
 
